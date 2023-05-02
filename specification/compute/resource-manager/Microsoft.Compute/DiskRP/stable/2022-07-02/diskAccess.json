@@ -570,6 +570,10 @@
           "type": "string",
           "format": "date-time",
           "description": "The time when the disk access was created."
+        },
+        "testStringForPowerShell": {
+          "type": "string",
+          "description": "The test string for PowerShell."
         }
       }
     },
