@@ -4568,7 +4568,10 @@
           "description": "The URI of the template. Use either the templateLink property or the template property, but not both."
         },
         "parameters": {
-          "$ref": "#/definitions/NestedDeploymentParameter",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/DeploymentParameter",
+          },
           "description": "Name and value pairs that define the deployment parameters for the template. You use this element when you want to provide the parameter values directly in the request rather than link to an existing parameter file. Use either the parametersLink property or the parameters property, but not both. It can be a JObject or a well formed JSON string."
         },
         "parametersLink": {
@@ -4605,22 +4608,22 @@
       ],
       "description": "Deployment properties."
     },
-    "NestedDeploymentParameter": {
+    "DeploymentParameter": {
       "properties": {
         "value": {
           "type": "object",
-          "description": "Input value to the parameter."
+          "description": "Input value to the parameter ."
         },
         "reference": {
-          "$ref": "#/definitions/KeyVaultParameterReference",
+          "$ref": "#/definitions/KeyVaultReferenceParameter",
           "description": "Azure Key Vault parameter reference."
         },
       },
       "required": [
       ],
-      "description": "Nested deployment parameter."
+      "description": "Deployment parameter for the template."
     },
-    "KeyVaultParameterReference": {
+    "KeyVaultReferenceParameter": {
       "properties": {
         "keyVault": {
           "$ref": "#/definitions/KeyVaultReference",
