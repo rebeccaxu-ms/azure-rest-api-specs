@@ -4609,16 +4609,45 @@
       "properties": {
         "value": {
           "type": "object",
-          "description": "Input value to the parameter"
+          "description": "Input value to the parameter."
         },
         "reference": {
-          "type": "object",
-          "description": "KeyVault parameter reference"
+          "$ref": "#/definitions/KeyVaultParameterReference",
+          "description": "Azure Key Vault parameter reference."
         },
       },
       "required": [
       ],
       "description": "Nested deployment parameter."
+    },
+    "KeyVaultParameterReference": {
+      "properties": {
+        "keyVault": {
+          "$ref": "#/definitions/KeyVaultReference",
+          "description": "Input value to the parameter."
+        },
+        "secretName": {
+          "type": "string",
+          "description": "Azure Key Vault secret name."
+        }
+      },
+      "required": [
+        "keyVault",
+        "secretName"
+      ],
+      "description": "Azure Key Vault parameter reference."
+    },
+    "KeyVaultReference": {
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Azure Key Vault resource id."
+        }
+      },
+      "required": [
+        "id"
+      ],
+      "description": "Azure Key Vault reference."
     },
     "DebugSetting": {
       "properties": {
