@@ -4632,6 +4632,10 @@
         "secretName": {
           "type": "string",
           "description": "Azure Key Vault secret name."
+        },
+        "secretVersion": {
+          "type": "string",
+          "description": "Azure Key Vault secret version."
         }
       },
       "required": [
