@@ -4615,15 +4615,15 @@
           "description": "Input value to the parameter ."
         },
         "reference": {
-          "$ref": "#/definitions/KeyVaultReferenceParameter",
+          "$ref": "#/definitions/KeyVaultParameterReference",
           "description": "Azure Key Vault parameter reference."
-        },
+        }
       },
       "required": [
       ],
       "description": "Deployment parameter for the template."
     },
-    "KeyVaultReferenceParameter": {
+    "KeyVaultParameterReference": {
       "properties": {
         "keyVault": {
           "$ref": "#/definitions/KeyVaultReference",
