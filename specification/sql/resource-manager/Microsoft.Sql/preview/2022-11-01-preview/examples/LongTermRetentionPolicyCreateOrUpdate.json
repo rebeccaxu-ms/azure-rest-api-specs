@@ -12,7 +12,7 @@
         "monthlyRetention": "P1Y",
         "yearlyRetention": "P5Y",
         "weekOfYear": 5,
-        "makeBackupsImmutable": "true"
+        "makeBackupsImmutable": true
       }
     }
   },
